@@ -22,7 +22,11 @@ module.exports = {
   ignorePatterns: ["!**/.server", "!**/.client"],
 
   // Base config
-  extends: ["eslint:recommended"],
+  "extends": ["eslint:recommended", "plugin:@typescript-eslint/recommended"],
+  "plugins": ["prettier"],
+  "rules": {
+    "prettier/prettier": "error"
+  },
 
   overrides: [
     // React
@@ -81,4 +85,5 @@ module.exports = {
       },
     },
   ],
+  
 };

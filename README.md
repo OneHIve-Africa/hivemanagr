@@ -1,40 +1,32 @@
-# Welcome to Remix!
+# OneHive Africa: Empowering Your Beekeeping Investments
 
-- 📖 [Remix docs](https://remix.run/docs)
+Welcome to OneHive Africa, a platform dedicated to connecting investors with beekeeping opportunities across Africa. Our mission is to promote sustainable beekeeping practices, support local beekeepers, and provide a unique investment opportunity for individuals and organizations.
 
-## Development
+**Why Invest in Beekeeping?**
 
-Run the dev server:
+Beekeeping is a vital industry that not only contributes to food security but also has a significant impact on the environment. With the global bee population facing threats, investing in beekeeping can help ensure the long-term health of ecosystems and food systems. Additionally, beekeeping offers a unique opportunity for diversification and returns on investment.
 
-```shellscript
-npm run dev
-```
+**How Does OneHive Africa Work?**
 
-## Deployment
+Our platform allows investors to browse and invest in beekeeping projects across Africa. Each project is carefully vetted and monitored to ensure transparency, accountability, and environmental sustainability. Investors can expect regular updates on project progress and returns on their investment.
 
-First, build your app for production:
+**Benefits of Investing with OneHive Africa**
 
-```sh
-npm run build
-```
+* **Diversify Your Portfolio**: Invest in a unique and growing industry that contributes to environmental sustainability.
+* **Support Local Communities**: Your investment directly supports local beekeepers and their communities.
+* **Competitive Returns**: Earn competitive returns on your investment while making a positive impact.
+* **Transparency and Accountability**: Our platform ensures transparency and accountability throughout the investment process.
 
-Then run the app in production mode:
+**Getting Started**
 
-```sh
-npm start
-```
+If you're interested in learning more about investing in beekeeping through OneHive Africa, please visit our website or contact us directly. Together, we can make a positive impact on the environment and local communities while generating returns on your investment.
 
-Now you'll need to pick a host to deploy it to.
+**Join the Movement**
 
-### DIY
+Be part of the movement to promote sustainable beekeeping practices and support local communities. Invest in OneHive Africa today and contribute to a brighter future for our planet.
 
-If you're familiar with deploying Node applications, the built-in Remix app server is production-ready.
+**Contact Us**
 
-Make sure to deploy the output of `npm run build`
-
-- `build/server`
-- `build/client`
-
-## Styling
-
-This template comes with [Tailwind CSS](https://tailwindcss.com/) already configured for a simple default starting experience. You can use whatever css framework you prefer. See the [Vite docs on css](https://vitejs.dev/guide/features.html#css) for more information.
+Email: [info@onehiveafrica.com](mailto:info@onehiveafrica.com)
+Website: onehiveafrica.com
+Phone: +234 812 345 6789
