@@ -11,6 +11,19 @@ body {
 
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
+.intersection-observer-root {
+  overflow: hidden;
+  position: relative;
+}
+
+.intersection-observer-root > div {
+  will-change: transform, opacity;
+}
+
 @layer base {
   :root {
     --radius: 0.5rem;

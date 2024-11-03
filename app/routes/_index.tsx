@@ -1,6 +1,7 @@
 import type { MetaFunction } from "@remix-run/node";
 import { Outlet } from "@remix-run/react";
 import { Button } from "~/components/ui/button";
+import Animate from "~/components/ui/custom/Animate";
 import BeeSection from "~/components/ui/custom/BeeSection";
 import Catalyst from "~/components/ui/custom/Catalyst";
 import EmpowerSection from "~/components/ui/custom/EmpowerSection";
@@ -22,6 +23,7 @@ export default function Index() {
         <EmpowerSection/>
         <WhyInvestSectipon/>
         <Catalyst/>
+        <Animate/>
     </div>
   );
 }
