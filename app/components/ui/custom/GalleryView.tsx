@@ -13,8 +13,12 @@ const GalleryView = (props: Props) => {
         {/* text */}
         <div>
           <div className="bg-oha__green w-10 h-10"></div>
-          <h1>ONE HIVE ONE TREE</h1>
-          <div>Discover the lucrative world of beekeping investments</div>
+          <h1 className="text-4xl font-semibold ml-10 mt-3">
+            ONE HIVE ONE TREE
+          </h1>
+          <div className="ml-10 mt-5">
+            Discover the lucrative world of <br /> beekeping investments
+          </div>
         </div>
         <div>
           <img

@@ -1,21 +1,13 @@
 import type { Config } from "tailwindcss";
-
+const { fontFamily } = require("tailwindcss/defaultTheme");
 export default {
   darkMode: ["class"],
   content: ["./app/**/{**,.client,.server}/**/*.{js,jsx,ts,tsx}"],
   theme: {
     extend: {
       fontFamily: {
-        sans: [
-          'Inter"',
-          "ui-sans-serif",
-          "system-ui",
-          "sans-serif",
-          'Apple Color Emoji"',
-          'Segoe UI Emoji"',
-          'Segoe UI Symbol"',
-          'Noto Color Emoji"',
-        ],
+        sans: ["'Plus Jakarta Sans'", ...fontFamily.sans],
+        oswald: ["'Oswald'", ...fontFamily.sans],
       },
       borderRadius: {
 

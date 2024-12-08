@@ -7,14 +7,23 @@ const WhyInvestSectipon = (props: Props) => {
   return (
     <div className="uid h-fit w-full px-10 md:px-[198px] flex flex-col py-28 gap-y-20">
       {/* keep investing */}
-      <div className="uid grid grid-cols-1 lg:grid-cols-5 ">
-        <div className="col-span-3">
-          <h1></h1>
-          <img
-            src={toybee}
-            alt="toybee"
-          />
-          <p></p>
+      <div className="uid grid grid-cols-1 lg:grid-cols-5 items-center">
+        <div className="col-span-3 relative ">
+          <h1 className="text-6xl font-semibold leading-snug">
+            Why Invest in <br /> Beekeeping?
+          </h1>
+          <div className="absolute -top-20 left-96">
+            <img
+              src={toybee}
+              alt="toybee"
+            />
+          </div>
+          <p className="text-2xl font-normal leading-snug mt-5">
+            Invest in a hive today and watch your investment grow <br /> over
+            six months to a year while supporting rural <br /> farmers. Be a
+            part of the change that promotes <br /> sustainable agriculture,
+            combats climate change, and <br /> drives economic empowerment.
+          </p>
         </div>
         <div className="col-span-2">
           <img
@@ -25,9 +34,18 @@ const WhyInvestSectipon = (props: Props) => {
       </div>
       {/* catalyst */}
       <div className="uid grid grid-cols-1 lg:grid-cols-5">
-        <div className="col-span-3 order-2">
-          <h1></h1>
-          <p></p>
+        <div className="col-span-3 order-2 grid gap-5 mt-5">
+          <h1 className="text-6xl font-semibold leading-snug">
+            Be a Catalyst for <br /> Change
+          </h1>
+          <p className="text-2xl font-normal ">
+            In the heart of Africa, there’s a silent revolution taking <br />
+            place, one that nurtures the earth, empowers <br />
+            communities, and creates a lasting impact. <br />
+            <br /> When you join One Hive Africa, you’re not just investing{" "}
+            <br /> in beekeeping, you’re investing in people, in nature <br />{" "}
+            and in a future where both can thrive together.
+          </p>
         </div>
         <div className="col-span-2 order-1">
           <img
