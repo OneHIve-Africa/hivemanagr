@@ -1,7 +1,7 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 import { Link, NavLink } from "@remix-run/react";
 import { Menu, X } from "lucide-react";
-import logo from "~/assets/logo.png"
+import logo from "~/assets/logo.png";
 
 interface NavItem {
   name: string;
@@ -11,21 +11,21 @@ interface NavItem {
 interface ActionButton {
   name: string;
   path: string;
-  variant: 'link' | 'outline' | 'solid';
+  variant: "link" | "outline" | "solid";
 }
 
 const navItems: NavItem[] = [
-  { name: 'Home', path: '/' },
-  { name: 'Investor', path: '/investor' },
-  { name: 'Beekeeper', path: '/beekeeper' },
-  { name: 'Partner', path: '/partner' },
-  { name: 'Impact', path: '/impact' },
+  { name: "Home", path: "/" },
+  { name: "Investor", path: "/investor" },
+  { name: "Beekeeper", path: "/beekeeper" },
+  { name: "Partner", path: "/partner" },
+  { name: "Impact", path: "/impact" },
 ];
 
 const actionButtons: ActionButton[] = [
-  { name: 'Login', path: '/login', variant: 'link' },
-  { name: 'Sponsor', path: '/sponsor', variant: 'outline' },
-  { name: 'Invest', path: '/invest', variant: 'solid' },
+  { name: "Login", path: "/login", variant: "link" },
+  { name: "Sponsor", path: "/sponsor", variant: "outline" },
+  { name: "Invest", path: "/invest", variant: "solid" },
 ];
 
 const NavigationHeader: React.FC = () => {
@@ -33,30 +33,32 @@ const NavigationHeader: React.FC = () => {
 
   const toggleMenu = (): void => setIsMenuOpen(!isMenuOpen);
 
-  const getButtonStyles = (variant: ActionButton['variant']): string => {
-    const baseStyles = "text-base font-bold font-['Plus Jakarta Sans'] transition-colors";
-    
+  const getButtonStyles = (variant: ActionButton["variant"]): string => {
+    const baseStyles =
+      "text-base font-bold font-['Plus Jakarta Sans'] transition-colors";
+
     switch (variant) {
-      case 'link':
+      case "link":
         return `${baseStyles} text-[#1b9d3c] font-medium hover:text-[#167d30]`;
-      case 'outline':
+      case "outline":
         return `${baseStyles} px-6 py-3 text-[#1b9d3c] border border-[#1b9d3c] rounded-md hover:bg-[#1b9d3c] hover:text-white`;
-      case 'solid':
+      case "solid":
         return `${baseStyles} px-6 py-3 text-white bg-[#1b9d3c] rounded-md hover:bg-[#167d30]`;
       default:
         return baseStyles;
     }
   };
 
-  const getMobileButtonStyles = (variant: ActionButton['variant']): string => {
-    const baseStyles = "text-lg font-bold font-['Plus Jakarta Sans'] transition-colors text-center";
-    
+  const getMobileButtonStyles = (variant: ActionButton["variant"]): string => {
+    const baseStyles =
+      "text-lg font-bold font-['Plus Jakarta Sans'] transition-colors text-center";
+
     switch (variant) {
-      case 'link':
+      case "link":
         return `${baseStyles} text-[#1b9d3c] font-medium hover:text-[#167d30]`;
-      case 'outline':
+      case "outline":
         return `${baseStyles} px-6 py-3 text-[#1b9d3c] border border-[#1b9d3c] rounded-md hover:bg-[#1b9d3c] hover:text-white`;
-      case 'solid':
+      case "solid":
         return `${baseStyles} px-6 py-3 text-white bg-[#1b9d3c] rounded-md hover:bg-[#167d30]`;
       default:
         return baseStyles;
@@ -64,12 +66,14 @@ const NavigationHeader: React.FC = () => {
   };
 
   return (
-    <nav className="w-full px-4 py-2 shadow-sm">
+    <nav className="w-full px-4 py-2 shadow-sm sticky">
       <div className=" mx-auto sm:px-20">
         {/* Desktop and Mobile Header */}
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link to="/" className="w-[118px] h-[34px] relative z-20">
+          <Link
+            to="/"
+            className="w-[118px] h-[34px] relative z-20">
             <img
               src={logo}
               alt="Logo"
@@ -82,13 +86,10 @@ const NavigationHeader: React.FC = () => {
             onClick={toggleMenu}
             className="p-2 pr-6 sm:hidden text-black hover:text-[#1b9d3c] transition-colors"
             aria-label="Toggle menu"
-            type="button"
-          >
-            {isMenuOpen ? (
+            type="button">
+            {isMenuOpen ?
               <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6 " />
-            )}
+            : <Menu className="h-6 w-6 " />}
           </button>
 
           {/* Desktop Navigation */}
@@ -100,12 +101,11 @@ const NavigationHeader: React.FC = () => {
                   to={item.path}
                   className={({ isActive }) =>
                     `text-base font-semibold font-['Plus Jakarta Sans'] transition-colors ${
-                      isActive 
-                        ? 'text-[#1b9d3c]' 
-                        : 'text-black hover:text-[#1b9d3c]'
+                      isActive ? "text-[#1b9d3c]" : (
+                        "text-black hover:text-[#1b9d3c]"
+                      )
                     }`
-                  }
-                >
+                  }>
                   {item.name}
                 </NavLink>
               ))}
@@ -118,8 +118,7 @@ const NavigationHeader: React.FC = () => {
               <Link
                 key={button.name}
                 to={button.path}
-                className={getButtonStyles(button.variant)}
-              >
+                className={getButtonStyles(button.variant)}>
                 {button.name}
               </Link>
             ))}
@@ -130,12 +129,10 @@ const NavigationHeader: React.FC = () => {
         <div
           className={`fixed inset-0 bg-white z-10 transform pl-5 pr-12 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-200 ease-in-out md:hidden`}
-        >
+          } transition-transform duration-200 ease-in-out md:hidden`}>
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-2 right-4 p-2 pr-6 text-white"
-          >
+            className="absolute top-2 right-4 p-2 pr-6 text-white">
             <X className="h-6 w-6 stroke-black" />
           </button>
           <div className="flex flex-col pt-20">
@@ -145,15 +142,14 @@ const NavigationHeader: React.FC = () => {
                 <NavLink
                   key={item.name}
                   to={item.path}
-                    className={({ isActive }) =>
+                  className={({ isActive }) =>
                     `text-base font-semibold font-['Plus Jakarta Sans'] transition-colors ${
-                      isActive 
-                        ? 'text-[#1b9d3c]' 
-                        : 'text-black hover:text-[#1b9d3c]'
+                      isActive ? "text-[#1b9d3c]" : (
+                        "text-black hover:text-[#1b9d3c]"
+                      )
                     }`
                   }
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                  onClick={() => setIsMenuOpen(false)}>
                   {item.name}
                 </NavLink>
               ))}
@@ -166,8 +162,7 @@ const NavigationHeader: React.FC = () => {
                   key={button.name}
                   to={button.path}
                   className={getMobileButtonStyles(button.variant)}
-                  onClick={() => setIsMenuOpen(false)}
-                >
+                  onClick={() => setIsMenuOpen(false)}>
                   {button.name}
                 </Link>
               ))}
