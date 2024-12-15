@@ -66,8 +66,8 @@ const NavigationHeader: React.FC = () => {
   };
 
   return (
-    <nav className="w-full px-4 py-2 shadow-sm sticky">
-      <div className=" mx-auto sm:px-20">
+    <nav className="w-full px-4 py-2 shadow-sm sticky z-50">
+      <div className=" mx-auto lg:px-20 ">
         {/* Desktop and Mobile Header */}
         <div className="flex items-center justify-between">
           {/* Logo */}
@@ -84,7 +84,7 @@ const NavigationHeader: React.FC = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={toggleMenu}
-            className="p-2 pr-6 sm:hidden text-black hover:text-[#1b9d3c] transition-colors"
+            className="p-2 pr-6 lg:hidden text-black hover:text-[#1b9d3c] transition-colors"
             aria-label="Toggle menu"
             type="button">
             {isMenuOpen ?
@@ -93,7 +93,7 @@ const NavigationHeader: React.FC = () => {
           </button>
 
           {/* Desktop Navigation */}
-          <div className="hidden sm:flex items-center gap-8 px-5">
+          <div className="hidden lg:flex items-center gap-8 px-5">
             <div className="flex items-center gap-8">
               {navItems.map((item) => (
                 <NavLink
@@ -113,7 +113,7 @@ const NavigationHeader: React.FC = () => {
           </div>
 
           {/* Desktop Action Buttons */}
-          <div className="hidden md:flex items-center gap-4">
+          <div className="hidden lg:flex items-center gap-4">
             {actionButtons.map((button) => (
               <Link
                 key={button.name}
@@ -127,7 +127,7 @@ const NavigationHeader: React.FC = () => {
 
         {/* Mobile Menu */}
         <div
-          className={`fixed inset-0 bg-white z-10 transform pl-5 pr-12 ${
+          className={`fixed inset-0 bg-white z-[1000] transform pl-5 pr-12 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
           } transition-transform duration-200 ease-in-out md:hidden`}>
           <button

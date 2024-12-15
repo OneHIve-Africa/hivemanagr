@@ -3,7 +3,7 @@ import combpng from "~/assets/comb.png";
 
 const EmpowerSection = () => {
   return (
-    <div className="w-full bg-oha__green px-10 md:px-[198px] py-28 relative h-[700px] uid text-white">
+    <div className="w-full bg-oha__green px-10 lg:px-[198px] py-28 relative h-[700px] uid text-white">
       <div className="uid text-white flex flex-col gap-10">
         <h1 className="font-semibold text-6xl leading-snug">
           Empower Lives. Protect Nature. <br /> Harvest the Future.

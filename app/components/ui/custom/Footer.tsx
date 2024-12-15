@@ -4,10 +4,8 @@ import {
   Facebook,
   Instagram,
   Linkedin,
-  LinkedinIcon,
   LucideYoutube,
   TwitterIcon,
-  Youtube,
 } from "lucide-react";
 
 interface NavItem {
@@ -22,90 +20,97 @@ const navItems: NavItem[] = [
   { name: "Partner", path: "/partner" },
   { name: "Impact", path: "/impact" },
 ];
-type Props = {};
-const Footer: React.FC<Props> = ({}) => {
+
+const Footer: React.FC = () => {
   return (
     <div
-      className="uid h-[800px] w-full px-10 md:px-[198px] py-2 bg-cover bg-center flex justify-center items-center text-white relative "
-      style={{ backgroundImage: `url(${footer})` }}>
-      <div className="absolute w-full h-full bg-black bg-opacity-70"></div>
-      <div className="flex flex-col justify-center items-center uid gap-10 w-full h-full z-10">
-        <h1 className="text-7xl font-semibold">BEE ALIVE</h1>
-        <h3 className="text-6xl font-bold">One Hive, One Tree</h3>
-        <h4 className="text-2xl">
+      className="h-[600px] w-full px-6 md:px-10 lg:px-[198px] py-10 relative flex justify-center items-center text-white"
+      style={{
+        backgroundImage: `url(${footer})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}>
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black bg-opacity-70"></div>
+
+      {/* Content */}
+      <div className="flex flex-col justify-center items-center gap-6 w-full h-full z-10 text-center">
+        <h1 className="text-4xl md:text-5xl lg:text-7xl font-semibold">
+          BEE ALIVE
+        </h1>
+        <h3 className="text-3xl md:text-4xl lg:text-6xl font-bold">
+          One Hive, One Tree
+        </h3>
+        <h4 className="text-lg md:text-xl lg:text-2xl leading-relaxed">
           Help us fund hives, plant trees, and make a lasting environmental
           impact.
         </h4>
 
-        <div className="flex gap-10">
-          <Button className="bg-transparent text-white rounded-md shadow font-semibold text-lg px-10 py-7">
+        {/* Buttons */}
+        <div className="flex flex-wrap gap-4 justify-center">
+          <Button className="bg-transparent text-white border border-white rounded-md text-base md:text-lg px-6 py-4">
             Login
           </Button>
-          <Button className="bg-white text-oha__green rounded-md shadow font-semibold text-lg px-10 py-7">
+          <Button className="bg-white text-black rounded-md text-base md:text-lg px-6 py-4">
             Sponsor
           </Button>
-          <Button className="bg-oha__green text-white rounded-md shadow font-semibold text-lg px-10 py-7">
+          <Button className="bg-oha__green text-white rounded-md text-base md:text-lg px-6 py-4">
             Invest
           </Button>
         </div>
 
-        <div className="w-full border-t-4 border-white flex justify-between mt-5">
-          <nav>
-            <ul className="flex gap-6 py-5">
+        {/* Footer Links */}
+        <div className="w-full border-t border-white mt-6 pt-6">
+          <div className="flex flex-col lg:flex-row justify-between items-center gap-4">
+            {/* Navigation Links */}
+            <nav className="flex gap-4">
               {navItems.map((item) => (
-                <li key={item.name}>
-                  <a
-                    href={item.path}
-                    className="text-white hover:underline">
-                    {item.name}
-                  </a>
-                </li>
+                <a
+                  key={item.name}
+                  href={item.path}
+                  className="text-white text-sm md:text-base hover:underline">
+                  {item.name}
+                </a>
               ))}
-            </ul>
-          </nav>
-          <div className="py-5">
-            © 2024 One Hive Africa. All rights reserved.
-          </div>
-          <div className="py-5">
-            <div className="flex gap-4 ">
+            </nav>
+
+            {/* Copyright */}
+            <div className="text-sm md:text-base">
+              © 2024 One Hive Africa. All rights reserved.
+            </div>
+
+            {/* Social Media */}
+            <div className="flex gap-4">
               <a
                 href="https://www.facebook.com/onehiveafrica"
                 target="_blank"
                 rel="noopener noreferrer">
-                <Facebook
-                  fill="true"
-                  className="fill-white"
-                />
+                <Facebook className="text-white w-5 h-5" />
+              </a>
+              <a
+                href="https://twitter.com/onehiveafrica"
+                target="_blank"
+                rel="noopener noreferrer">
+                <TwitterIcon className="text-white w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/onehiveafrica"
                 target="_blank"
                 rel="noopener noreferrer">
-                <TwitterIcon
-                  fill="true"
-                  className="fill-white"
-                />
-              </a>
-              <a
-                href="https://www.linkedin.com/company/onehiveafrica"
-                target="_blank"
-                rel="noopener noreferrer">
-                <Linkedin
-                  fill="true"
-                  className="fill-white"
-                />
+                <Linkedin className="text-white w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/onehiveafrica"
                 target="_blank"
                 rel="noopener noreferrer">
-                <LucideYoutube className="stroke-white" />
+                <LucideYoutube className="text-white w-5 h-5" />
               </a>
               <a
                 href="https://www.instagram.com/onehiveafrica"
                 target="_blank"
                 rel="noopener noreferrer">
-                <Instagram />
+                <Instagram className="text-white w-5 h-5" />
               </a>
             </div>
           </div>
@@ -116,7 +121,3 @@ const Footer: React.FC<Props> = ({}) => {
 };
 
 export default Footer;
-
-// <div className="flex gap-10">
-
-// </div>
