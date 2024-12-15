@@ -9,7 +9,7 @@ const WhyInvestSectipon = (props: Props) => {
       {/* keep investing */}
       <div className="uid grid grid-cols-1 lg:grid-cols-5 items-center">
         <div className="col-span-3 relative ">
-          <h1 className="text-6xl font-semibold leading-snug">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-snug">
             Why Invest in <br /> Beekeeping?
           </h1>
           <div className="absolute -top-20 left-96">
@@ -18,11 +18,11 @@ const WhyInvestSectipon = (props: Props) => {
               alt="toybee"
             />
           </div>
-          <p className="text-2xl font-normal leading-snug mt-5">
-            Invest in a hive today and watch your investment grow <br /> over
-            six months to a year while supporting rural <br /> farmers. Be a
-            part of the change that promotes <br /> sustainable agriculture,
-            combats climate change, and <br /> drives economic empowerment.
+          <p className="text-lg sm:text-xl md:text-2xl font-normal leading-loose mt-5 w-full lg:w-[500px] mb-10">
+            Invest in a hive today and watch your investment grow over six
+            months to a year while supporting rural farmers. Be a part of the
+            change that promotes sustainable agriculture, combats climate
+            change, and drives economic empowerment.
           </p>
         </div>
         <div className="col-span-2">
@@ -35,16 +35,15 @@ const WhyInvestSectipon = (props: Props) => {
       {/* catalyst */}
       <div className="uid grid grid-cols-1 lg:grid-cols-5">
         <div className="col-span-3 order-2 grid gap-5 mt-5">
-          <h1 className="text-6xl font-semibold leading-snug">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-snug">
             Be a Catalyst for <br /> Change
           </h1>
-          <p className="text-2xl font-normal ">
-            In the heart of Africa, there’s a silent revolution taking <br />
-            place, one that nurtures the earth, empowers <br />
-            communities, and creates a lasting impact. <br />
-            <br /> When you join One Hive Africa, you’re not just investing{" "}
-            <br /> in beekeeping, you’re investing in people, in nature <br />{" "}
-            and in a future where both can thrive together.
+          <p className="text-lg sm:text-xl md:text-2xl font-normal leading-loose mt-5 w-full lg:w-[500px] mb-10">
+            In the heart of Africa, there{"’"}s a silent revolution taking{" "}
+            place, one that nurtures the earth, empowers communities, and
+            creates a lasting impact. When you join One Hive Africa, you{"’"}re
+            not just investing in beekeeping, you{"’"}re investing in people, in
+            nature and in a future where both can thrive together.
           </p>
         </div>
         <div className="col-span-2 order-1">
