@@ -71,14 +71,8 @@ const NavigationHeader: React.FC = () => {
         {/* Desktop and Mobile Header */}
         <div className="flex items-center justify-between">
           {/* Logo */}
-          <Link
-            to="/"
-            className="w-[118px] h-[34px] relative z-20">
-            <img
-              src={logo}
-              alt="Logo"
-              className="w-full h-full"
-            />
+          <Link to="/" className="w-[118px] h-[34px] relative z-20">
+            <img src={logo} alt="Logo" className="w-full h-full" />
           </Link>
 
           {/* Mobile Menu Button */}
@@ -86,10 +80,13 @@ const NavigationHeader: React.FC = () => {
             onClick={toggleMenu}
             className="p-2 pr-6 lg:hidden text-black hover:text-[#1b9d3c] transition-colors"
             aria-label="Toggle menu"
-            type="button">
-            {isMenuOpen ?
+            type="button"
+          >
+            {isMenuOpen ? (
               <X className="h-6 w-6" />
-            : <Menu className="h-6 w-6 " />}
+            ) : (
+              <Menu className="h-6 w-6 " />
+            )}
           </button>
 
           {/* Desktop Navigation */}
@@ -100,12 +97,13 @@ const NavigationHeader: React.FC = () => {
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `text-base font-semibold font-['Plus Jakarta Sans'] transition-colors ${
-                      isActive ? "text-[#1b9d3c]" : (
-                        "text-black hover:text-[#1b9d3c]"
-                      )
+                    `text-base font-medium leading-relaxed tracking-wider font-['Plus Jakarta Sans'] transition-colors ${
+                      isActive
+                        ? "text-[#1b9d3c]"
+                        : "text-black hover:text-[#1b9d3c]"
                     }`
-                  }>
+                  }
+                >
                   {item.name}
                 </NavLink>
               ))}
@@ -118,7 +116,8 @@ const NavigationHeader: React.FC = () => {
               <Link
                 key={button.name}
                 to={button.path}
-                className={getButtonStyles(button.variant)}>
+                className={getButtonStyles(button.variant)}
+              >
                 {button.name}
               </Link>
             ))}
@@ -129,10 +128,12 @@ const NavigationHeader: React.FC = () => {
         <div
           className={`fixed inset-0 bg-white z-[1000] transform pl-5 pr-12 ${
             isMenuOpen ? "translate-x-0" : "translate-x-full"
-          } transition-transform duration-200 ease-in-out md:hidden`}>
+          } transition-transform duration-200 ease-in-out md:hidden`}
+        >
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-2 right-4 p-2 pr-6 text-white">
+            className="absolute top-2 right-4 p-2 pr-6 text-white"
+          >
             <X className="h-6 w-6 stroke-black" />
           </button>
           <div className="flex flex-col pt-20">
@@ -143,13 +144,14 @@ const NavigationHeader: React.FC = () => {
                   key={item.name}
                   to={item.path}
                   className={({ isActive }) =>
-                    `text-base font-semibold font-['Plus Jakarta Sans'] transition-colors ${
-                      isActive ? "text-[#1b9d3c]" : (
-                        "text-black hover:text-[#1b9d3c]"
-                      )
+                    `text-base font-medium leading-relaxed tracking-wider font-['Plus Jakarta Sans'] transition-colors ${
+                      isActive
+                        ? "text-[#1b9d3c]"
+                        : "text-black hover:text-[#1b9d3c]"
                     }`
                   }
-                  onClick={() => setIsMenuOpen(false)}>
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {item.name}
                 </NavLink>
               ))}
@@ -162,7 +164,8 @@ const NavigationHeader: React.FC = () => {
                   key={button.name}
                   to={button.path}
                   className={getMobileButtonStyles(button.variant)}
-                  onClick={() => setIsMenuOpen(false)}>
+                  onClick={() => setIsMenuOpen(false)}
+                >
                   {button.name}
                 </Link>
               ))}

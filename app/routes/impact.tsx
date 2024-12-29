@@ -12,8 +12,9 @@ export const meta: MetaFunction = () => {
 
 export default function Impact() {
   return (
-    <div className="bg-white flex h-screen justify-center">
+    <div className="bg-white h-fit items-center w-screen grid">
       <Header />
+      <div className="z-0"></div>
       <Footer />
     </div>
   );

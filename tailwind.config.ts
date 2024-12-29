@@ -9,14 +9,20 @@ export default {
         sans: ["'Plus Jakarta Sans'", ...fontFamily.sans],
         oswald: ["'Oswald'", ...fontFamily.sans],
       },
-      borderRadius: {
-
-      },
+      borderRadius: {},
       colors: {
-        oha__green: '#1b9d3c',
-        oha__yellow: '#F09443'
-
-      }
+        oha__green: "#1b9d3c",
+        oha__yellow: "#F09443",
+      },
+      animation: {
+        fadeIn: "fadeIn 1s ease-in forwards",
+      },
+      keyframes: {
+        fadeIn: {
+          "0%": { opacity: "0" },
+          "100%": { opacity: "1" },
+        },
+      },
     },
   },
   plugins: [require("tailwindcss-animate")],
