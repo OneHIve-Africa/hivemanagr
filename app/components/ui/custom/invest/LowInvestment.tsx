@@ -34,7 +34,6 @@ const LowInvestment: React.FC = () => {
             description="Our investor dashboard provides real-time updates on your investment, from hive management to honey production and sales."
             imageSrc={honey_mask}
             backgroundColor="#f4f4f4"
-            className="shadow-lg"
           />
 
           <Frame
@@ -49,7 +48,6 @@ const LowInvestment: React.FC = () => {
             description="We collaborate with reputable organizations to ensure the highest standards in beekeeping and honey production."
             imageSrc={handshake_skew}
             backgroundColor="#f4f4f4"
-            className="shadow-lg"
           />
         </div>
       </div>
