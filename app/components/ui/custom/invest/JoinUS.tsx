@@ -4,9 +4,9 @@ import { Button } from "../../button";
 
 const JoinUS: React.FC = () => {
   return (
-    <div className="px-5 md:px-10 lg:px-[198px] py-16 uid">
+    <div className="px-5 md:px-10 lg:px-[198px] py-16 uid ">
       <div
-        className="uid h-auto md:h-[800px] px-5 md:px-[198px] py-10 bg-oha__green bg-cover bg-center flex justify-center items-center text-white"
+        className="uid h-auto md:h-[800px] px-5 md:px-[198px] py-10 bg-oha__green bg-cover bg-center flex justify-center items-center text-white rounded-lg"
         style={{ backgroundImage: `url(${back})` }}>
         <div className="flex flex-col justify-center items-center uid gap-6 text-center">
           <h1 className="text-3xl md:text-5xl font-extrabold w-full">

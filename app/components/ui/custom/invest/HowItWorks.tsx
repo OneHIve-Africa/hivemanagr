@@ -12,90 +12,87 @@ const HowItWorks = () => {
         How It Works ...
       </h1>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 px-6 md:px-10 lg:px-20 items-center">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         {/* Image Section */}
         <img
-          className=" h-auto object-cover uid"
+          className="h-56 md:h-full object-cover uid w-full rounded-lg"
           src={close_up}
           alt="close up"
         />
-
         {/* Content Section */}
-        <div className="relative space-y-16 lg:-ml-20 lg:w-[415px]">
+        <div className="relative lg:ml-20 lg:w-[415px] grid gap-5">
           {/* Section 1 */}
-          <div className="relative flex items-start gap-4 mb-6">
-            <img
-              className="w-12 h-12"
-              alt="Idea"
-              src={idea}
-            />
-            <div className="space-y-3">
+          <div className="relative grid items-start gap-4 mb-6">
+            <div className="uid flex w-full items-center gap-5">
+              <img className="w-12 h-12" alt="Idea" src={idea} />
               <h3 className="text-xl md:text-2xl font-semibold">
                 Explore Opportunities
               </h3>
-              <p className="text-base md:text-lg text-gray-600">
+            </div>
+            <div className="flex w-full  gap-5">
+              <div className="w-12 flex items-center justify-center">
+                <div className="w-0.5 h-full bg-gray-300 ml-2"></div>
+              </div>
+              <p className="text-base md:text-lg text-gray-600 uid w-full">
                 Access detailed information about the cost of beehives,
                 locations, beekeepers available to manage them, and the expected
                 returns.
               </p>
             </div>
-            <div className="absolute left-0 top-1/2 ml-6 w-0.5 h-full bg-gray-300"></div>{" "}
-            {/* Connecting line */}
           </div>
 
           {/* Section 2 */}
-          <div className="relative flex items-start gap-4">
-            <img
-              className="w-12 h-12"
-              alt="Money box"
-              src={moneyBox}
-            />
-            <div className="space-y-3">
+          <div className="relative grid items-start gap-4 mb-6">
+            <div className="uid flex w-full items-center gap-5">
+              <img className="w-12 h-12" alt="Money box" src={moneyBox} />
               <h3 className="text-xl md:text-2xl font-semibold">
                 Make Your Investment
               </h3>
-              <p className="text-base md:text-lg text-gray-600">
+            </div>
+            <div className="flex w-full  gap-5">
+              <div className="w-12 flex items-center justify-center">
+                <div className="w-0.5 h-full bg-gray-300 ml-2"></div>
+              </div>
+              <p className="text-base md:text-lg text-gray-600 uid w-full">
                 Choose your preferred investment option, whether it{"’"}s a
                 short-term (6 months - 1 year) or long-term (2 years - 5 years)
                 commitment.
               </p>
             </div>
-            <div className="absolute left-0 top-1/2 ml-6 w-0.5 h-full bg-gray-300"></div>{" "}
-            {/* Connecting line */}
           </div>
 
           {/* Section 3 */}
-          <div className="relative flex items-start gap-4">
-            <img
-              className="w-12 h-12"
-              alt="Bar chart"
-              src={barChart}
-            />
-            <div className="space-y-3">
+          <div className="relative grid items-start gap-4 mb-6">
+            <div className="uid flex w-full items-center gap-5">
+              <img className="w-12 h-12" alt="Bar chart" src={barChart} />
               <h3 className="text-xl md:text-2xl font-semibold">
                 Track Your Progress
               </h3>
-              <p className="text-base md:text-lg text-gray-600">
+            </div>
+            <div className="flex w-full  gap-5">
+              <div className="w-12 flex items-center justify-center">
+                <div className="w-0.5 h-full bg-gray-300 ml-2"></div>
+              </div>
+              <p className="text-base md:text-lg text-gray-600 uid w-full">
                 Use our intuitive dashboard to monitor your investment{"’"}s
                 progress, including hive health, honey production, and sales.
               </p>
             </div>
-            <div className="absolute left-0 top-1/2 ml-6 w-0.5 h-full bg-gray-300"></div>{" "}
-            {/* Connecting line */}
           </div>
 
           {/* Section 4 */}
-          <div className="relative flex items-start gap-4">
-            <img
-              className="w-12 h-12"
-              alt="Trophy"
-              src={trophy}
-            />
-            <div className="space-y-3">
+          <div className="relative grid items-start gap-4 mb-6">
+            <div className="uid flex w-full items-center gap-5">
+              <img className="w-12 h-12" alt="Trophy" src={trophy} />
               <h3 className="text-xl md:text-2xl font-semibold">
                 Reap the Rewards
               </h3>
-              <p className="text-base md:text-lg text-gray-600">
+            </div>
+            <div className="flex w-full  gap-5">
+              <div className="w-12 flex items-center justify-center">
+                <div className="w-0.5 h-full bg-gray-300 ml-2"></div>
+              </div>
+              <p className="text-base md:text-lg text-gray-600 uid w-full">
                 At the end of the investment period, receive your returns, along
                 with the satisfaction of knowing you’ve made a positive impact.
               </p>
