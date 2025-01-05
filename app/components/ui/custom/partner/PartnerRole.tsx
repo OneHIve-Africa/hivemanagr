@@ -9,7 +9,7 @@ import brush from "~/assets/brush.png";
 const PartnerRole: React.FC = () => {
   return (
     <div className="px-10 lg:px-[198px] py-28">
-      <div className="grid gap-10">
+      {/* <div className="grid gap-10">
         <h1 className="text-3xl lg:text-6xl font-semibold ">
           Low Investment, High Impact
         </h1>
@@ -19,11 +19,21 @@ const PartnerRole: React.FC = () => {
           contribution helps support sustainable beekeeping and fosters a
           healthier planet for everyone."
         </p>
-      </div>
+      </div> */}
 
       <div className="my-20 flex justify-center items-center w-full uid">
         <div className="grid md:grid-cols-2 items-center gap-6 md:gap-20 w-full md:w-fit uid self-center">
-          <div></div>
+          <div className="grid gap-10">
+            <h1 className="text-3xl lg:text-6xl font-semibold ">
+              Low Investment, High Impact
+            </h1>
+            <p className="text-lg lg:text-2xl font-normal leading-loose lg:w-[800px]">
+              Even the smallest investment can create a significant impact on
+              our environment and bee populations. Join us in making a
+              difference—your contribution helps support sustainable beekeeping
+              and fosters a healthier planet for everyone."
+            </p>
+          </div>
 
           <Frame
             title="Educate and Train"
