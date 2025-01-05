@@ -1,8 +1,11 @@
 import React from "react";
 import { Frame } from "../Frame";
-import beeetilt from "~/assets/beekeeper-tilt.png";
-import tishi from "~/assets/tilt-shift-medieval.png";
-import vimod from "~/assets/view-modern.png";
+// import beeetilt from "~/assets/beekeeper-tilt.png";
+// import tishi from "~/assets/tilt-shift-medieval.png";
+// import vimod from "~/assets/view-modern.png";
+import trcomb from "~/assets/trcomb.png";
+import tree from "~/assets/tree.png";
+import brush from "~/assets/brush.png";
 const PartnerRole: React.FC = () => {
   return (
     <div className="px-10 lg:px-[198px] py-28">
@@ -25,21 +28,21 @@ const PartnerRole: React.FC = () => {
           <Frame
             title="Educate and Train"
             description=" Provide essential beekeeping knowledge and skills to communities."
-            imageSrc={vimod}
+            imageSrc={trcomb}
             backgroundColor="#d9d9d9"
           />
 
           <Frame
             title="Equip Farmers"
             description="Supply the necessary tools and hives to get started."
-            imageSrc={beeetilt}
+            imageSrc={brush}
             backgroundColor="#d9d9d9"
           />
 
           <Frame
             title="Nurture the Environment"
             description="Foster initiatives like reforestation and biodiversity protection through beekeeping."
-            imageSrc={tishi}
+            imageSrc={tree}
             backgroundColor="#d9d9d9"
           />
         </div>
