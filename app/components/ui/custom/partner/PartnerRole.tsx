@@ -23,11 +23,11 @@ const PartnerRole: React.FC = () => {
 
       <div className="my-20 flex justify-center items-center w-full uid">
         <div className="grid md:grid-cols-2 items-center gap-6 md:gap-20 w-full md:w-fit uid self-center">
-          <div className="grid gap-10">
+          <div className="grid gap-10 -mt-32">
             <h1 className="text-3xl lg:text-6xl font-semibold ">
               Low Investment, High Impact
             </h1>
-            <p className="text-lg lg:text-2xl font-normal leading-loose lg:w-[800px]">
+            <p className="text-lg lg:text-2xl font-normal leading-loose">
               Even the smallest investment can create a significant impact on
               our environment and bee populations. Join us in making a
               difference—your contribution helps support sustainable beekeeping
