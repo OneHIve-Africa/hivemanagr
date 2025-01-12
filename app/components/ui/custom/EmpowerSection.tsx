@@ -22,11 +22,7 @@ const EmpowerSection = () => {
         </div>
       </div>
       <div className="absolute right-0 bottom-0 pb-6 sm:pb-10">
-        <img
-          src={combpng}
-          alt="comb"
-          className="h-60 sm:h-96"
-        />
+        <img src={combpng} alt="comb" className="h-60 sm:h-96 opacity-40" />
       </div>
     </div>
   );

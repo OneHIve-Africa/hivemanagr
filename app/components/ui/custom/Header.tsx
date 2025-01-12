@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { Link, NavLink } from "@remix-run/react";
 import { Menu, X } from "lucide-react";
 import logo from "~/assets/logo.png";
@@ -30,6 +30,7 @@ const actionButtons: ActionButton[] = [
 
 const NavigationHeader: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState<boolean>(false);
+  const [isSticky, setIsSticky] = useState<boolean>(false);
 
   const toggleMenu = (): void => setIsMenuOpen(!isMenuOpen);
 
@@ -49,26 +50,24 @@ const NavigationHeader: React.FC = () => {
     }
   };
 
-  const getMobileButtonStyles = (variant: ActionButton["variant"]): string => {
-    const baseStyles =
-      "text-lg font-bold font-['Plus Jakarta Sans'] transition-colors text-center";
-
-    switch (variant) {
-      case "link":
-        return `${baseStyles} text-[#1b9d3c] font-medium hover:text-[#167d30]`;
-      case "outline":
-        return `${baseStyles} px-6 py-3 text-[#1b9d3c] border border-[#1b9d3c] rounded-md hover:bg-[#1b9d3c] hover:text-white`;
-      case "solid":
-        return `${baseStyles} px-6 py-3 text-white bg-[#1b9d3c] rounded-md hover:bg-[#167d30]`;
-      default:
-        return baseStyles;
-    }
+  const handleScroll = () => {
+    const scrollTop = window.scrollY;
+    setIsSticky(scrollTop > 50); // Adjust the threshold as needed
   };
 
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="w-full px-4 py-2 shadow-sm sticky z-50">
-      <div className=" mx-auto lg:px-20 ">
-        {/* Desktop and Mobile Header */}
+    <nav
+      className={`w-full px-4 py-2 shadow-sm z-50 fixed top-0 transition-colors duration-300 ${
+        isSticky ? "bg-white" : "bg-transparent"
+      }`}
+    >
+      <div className="mx-auto lg:px-20">
+        {/* Header Content */}
         <div className="flex items-center justify-between">
           {/* Logo */}
           <Link to="/" className="w-[118px] h-[34px] relative z-20">
@@ -85,29 +84,27 @@ const NavigationHeader: React.FC = () => {
             {isMenuOpen ? (
               <X className="h-6 w-6" />
             ) : (
-              <Menu className="h-6 w-6 " />
+              <Menu className="h-6 w-6" />
             )}
           </button>
 
           {/* Desktop Navigation */}
           <div className="hidden lg:flex items-center gap-8 px-5">
-            <div className="flex items-center gap-8">
-              {navItems.map((item) => (
-                <NavLink
-                  key={item.name}
-                  to={item.path}
-                  className={({ isActive }) =>
-                    `text-base font-medium leading-relaxed tracking-wider font-['Plus Jakarta Sans'] transition-colors ${
-                      isActive
-                        ? "text-[#1b9d3c]"
-                        : "text-black hover:text-[#1b9d3c]"
-                    }`
-                  }
-                >
-                  {item.name}
-                </NavLink>
-              ))}
-            </div>
+            {navItems.map((item) => (
+              <NavLink
+                key={item.name}
+                to={item.path}
+                className={({ isActive }) =>
+                  `text-base font-medium leading-relaxed tracking-wider font-['Plus Jakarta Sans'] transition-colors ${
+                    isActive
+                      ? "text-[#1b9d3c]"
+                      : "text-black hover:text-[#1b9d3c]"
+                  }`
+                }
+              >
+                {item.name}
+              </NavLink>
+            ))}
           </div>
 
           {/* Desktop Action Buttons */}
@@ -132,9 +129,9 @@ const NavigationHeader: React.FC = () => {
         >
           <button
             onClick={() => setIsMenuOpen(false)}
-            className="absolute top-2 right-4 p-2 pr-6 text-white"
+            className="absolute top-2 right-4 p-2 pr-6 text-black"
           >
-            <X className="h-6 w-6 stroke-black" />
+            <X className="h-6 w-6" />
           </button>
           <div className="flex flex-col pt-20">
             {/* Mobile Navigation Links */}
@@ -163,7 +160,7 @@ const NavigationHeader: React.FC = () => {
                 <Link
                   key={button.name}
                   to={button.path}
-                  className={getMobileButtonStyles(button.variant)}
+                  className={getButtonStyles(button.variant)}
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {button.name}

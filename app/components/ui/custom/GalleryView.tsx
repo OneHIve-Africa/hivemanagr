@@ -30,7 +30,7 @@ const GalleryView = (props: Props) => {
       </div>
 
       {/* Image Section */}
-      <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-10">
+      <div className="col-span-1 sm:col-span-2 lg:col-span-3 grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-2 gap-x-10 lg:mt-28">
         <div className="uid w-full h-fit">
           <img
             className="w-full object-contain object-center"
