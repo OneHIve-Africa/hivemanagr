@@ -7,6 +7,7 @@ import {
   LucideYoutube,
   TwitterIcon,
 } from "lucide-react";
+import DynaButtons from "./buttons/DynaButtons";
 
 interface NavItem {
   name: string;
@@ -30,7 +31,8 @@ const Footer: React.FC = () => {
         backgroundSize: "cover",
         backgroundPosition: "center",
         backgroundRepeat: "no-repeat",
-      }}>
+      }}
+    >
       {/* Overlay */}
       <div className="absolute inset-0 bg-black bg-opacity-70"></div>
 
@@ -49,15 +51,13 @@ const Footer: React.FC = () => {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 justify-center">
-          <Button className="bg-transparent text-white border border-white rounded-md text-base md:text-lg px-6 py-4">
-            Login
-          </Button>
-          <Button className="bg-white text-black rounded-md text-base md:text-lg px-6 py-4">
-            Sponsor
-          </Button>
-          <Button className="bg-oha__green text-white rounded-md text-base md:text-lg px-6 py-4">
-            Invest
-          </Button>
+          <DynaButtons
+            name="Login"
+            variant="outlinewhite"
+            path="https://ohaplatform.vercel.app/"
+          />
+          <DynaButtons name="Sponsor" variant="solidwhite" path="/partner" />
+          <DynaButtons name="Invest" variant="solid" path="/investor" />
         </div>
 
         {/* Footer Links */}
@@ -69,7 +69,8 @@ const Footer: React.FC = () => {
                 <a
                   key={item.name}
                   href={item.path}
-                  className="text-white text-sm md:text-base hover:underline">
+                  className="text-white text-sm md:text-base hover:underline"
+                >
                   {item.name}
                 </a>
               ))}
@@ -85,31 +86,36 @@ const Footer: React.FC = () => {
               <a
                 href="https://www.facebook.com/onehiveafrica"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <Facebook className="text-white w-5 h-5" />
               </a>
               <a
                 href="https://twitter.com/onehiveafrica"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <TwitterIcon className="text-white w-5 h-5" />
               </a>
               <a
                 href="https://www.linkedin.com/company/onehiveafrica"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <Linkedin className="text-white w-5 h-5" />
               </a>
               <a
                 href="https://www.youtube.com/onehiveafrica"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <LucideYoutube className="text-white w-5 h-5" />
               </a>
               <a
                 href="https://www.instagram.com/onehiveafrica"
                 target="_blank"
-                rel="noopener noreferrer">
+                rel="noopener noreferrer"
+              >
                 <Instagram className="text-white w-5 h-5" />
               </a>
             </div>

@@ -23,10 +23,10 @@ const PartnerWhy: React.FC = () => {
 
   return (
     <div
-      className="w-full bg-oha__yellow px-6 sm:px-10 lg:px-[198px] py-20 sm:py-28 relative h-auto sm:h-[700px] uid text-white bg-cover bg-center"
+      className="w-full bg-oha__yellow px-6 sm:px-10 lg:px-[198px] py-20 sm:py-28 relative h-auto sm:h-[700px]  text-white bg-cover bg-center"
       style={{ backgroundImage: `url(${back})` }}
     >
-      <div className="uid text-white flex flex-col gap-6 lg:gap-48 -mt-14">
+      <div className=" text-white flex flex-col gap-6 lg:gap-48 -mt-14">
         {/* controls */}
         <div className="flex justify-between items-center w-full">
           <button
@@ -81,16 +81,11 @@ const PartnerWhy: React.FC = () => {
                   <button
                     className={`${
                       index === currentIndex
-                        ? "bg-transparent text-oha__green"
-                        : "bg-transparent text-white"
-                    } flex items-center justify-center font-light transition-colors`}
+                        ? "bg-white text-oha__green w-14"
+                        : "bg-white/60 text-white w-4"
+                    } flex items-center justify-center font-light transition-opacity h-2  rounded-full ease-in-out duration-300`}
                     onClick={() => setCurrentIndex(index)}
-                  >
-                    {index + 1}
-                  </button>
-                  {index < carouselContent.length - 1 && (
-                    <span className="bg-white w-10 h-0.5"></span>
-                  )}
+                  ></button>
                 </React.Fragment>
               ))}
             </div>

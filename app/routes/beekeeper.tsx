@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Button } from "~/components/ui/button";
 import BeeHow from "~/components/ui/custom/beekeeper/BeeHow";
 import BeeJoin from "~/components/ui/custom/beekeeper/BeeJoin";
 import BeeWhy from "~/components/ui/custom/beekeeper/BeeWhy";

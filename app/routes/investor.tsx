@@ -1,5 +1,4 @@
 import type { MetaFunction } from "@remix-run/node";
-import { Button } from "~/components/ui/button";
 import Footer from "~/components/ui/custom/Footer";
 import Header from "~/components/ui/custom/Header";
 import HeroSection from "~/components/ui/custom/invest/HeroSection";

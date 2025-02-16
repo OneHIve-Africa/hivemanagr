@@ -20,12 +20,13 @@ const navItems: NavItem[] = [
   { name: "Beekeeper", path: "/beekeeper" },
   { name: "Partner", path: "/partner" },
   { name: "Impact", path: "/impact" },
+  { name: "Contact Us", path: "/contact" },
 ];
 
 const actionButtons: ActionButton[] = [
-  { name: "Login", path: "/login", variant: "link" },
-  { name: "Sponsor", path: "/sponsor", variant: "outline" },
-  { name: "Invest", path: "/invest", variant: "solid" },
+  { name: "Login", path: "https://ohaplatform.vercel.app/", variant: "link" },
+  { name: "Sponsor", path: "/partner", variant: "outline" },
+  { name: "Invest", path: "/investor", variant: "solid" },
 ];
 
 const NavigationHeader: React.FC = () => {
@@ -36,15 +37,15 @@ const NavigationHeader: React.FC = () => {
 
   const getButtonStyles = (variant: ActionButton["variant"]): string => {
     const baseStyles =
-      "text-base font-bold font-['Plus Jakarta Sans'] transition-colors";
+      "text-sm font-bold font-['Plus Jakarta Sans'] transition-colors";
 
     switch (variant) {
       case "link":
         return `${baseStyles} text-[#1b9d3c] font-medium hover:text-[#167d30]`;
       case "outline":
-        return `${baseStyles} px-6 py-3 text-[#1b9d3c] border border-[#1b9d3c] rounded-md hover:bg-[#1b9d3c] hover:text-white`;
+        return `${baseStyles} px-6 py-2 text-[#1b9d3c] border border-[#1b9d3c] rounded-md hover:bg-[#1b9d3c] hover:text-white`;
       case "solid":
-        return `${baseStyles} px-6 py-3 text-white bg-[#1b9d3c] rounded-md hover:bg-[#167d30]`;
+        return `${baseStyles} px-6 py-2 text-white bg-[#1b9d3c] rounded-md hover:bg-[#167d30]`;
       default:
         return baseStyles;
     }
@@ -62,8 +63,8 @@ const NavigationHeader: React.FC = () => {
 
   return (
     <nav
-      className={`w-full px-4 py-2 shadow-sm z-50 fixed top-0 transition-colors duration-300 ${
-        isSticky ? "bg-white" : "bg-transparent"
+      className={`w-full px-4 py-3 shadow-sm z-50 fixed top-0 transition-colors duration-300 ${
+        isSticky ? "bg-white" : "bg-white"
       }`}
     >
       <div className="mx-auto lg:px-20">
@@ -95,7 +96,7 @@ const NavigationHeader: React.FC = () => {
                 key={item.name}
                 to={item.path}
                 className={({ isActive }) =>
-                  `text-base font-medium leading-relaxed tracking-wider font-['Plus Jakarta Sans'] transition-colors ${
+                  `text-sm font-medium leading-relaxed tracking-wider font-['Plus Jakarta Sans'] transition-colors ${
                     isActive
                       ? "text-[#1b9d3c]"
                       : "text-black hover:text-[#1b9d3c]"

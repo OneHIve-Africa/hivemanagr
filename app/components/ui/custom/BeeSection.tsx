@@ -13,26 +13,24 @@ const BeeSection: React.FC = () => {
 
       window.addEventListener("scroll", handleScroll);
 
-      // Trigger fade-in animation on load
       setIsLoaded(true);
 
       return () => window.removeEventListener("scroll", handleScroll);
     }
   }, []);
 
-  // Calculate fade-out opacity and parallax effect
-  const sectionHeight = typeof window !== "undefined" ? window.innerHeight : 0; // Screen height
-  const fadeStart = sectionHeight * 0.6; // Start fading at 60% of the section
-  const fadeEnd = sectionHeight; // Fully faded out at the end of the section
+  const sectionHeight = typeof window !== "undefined" ? window.innerHeight : 0;
+  const fadeStart = sectionHeight * 0.6;
+  const fadeEnd = sectionHeight;
   const opacity = Math.max(
     1 - (scrollY - fadeStart) / (fadeEnd - fadeStart),
     0
   );
-  const translateY = scrollY * 0.3; // Parallax effect
+  const translateY = scrollY * 0.3;
 
   return (
     <div className="uid h-screen w-full bg-oha__yellow relative overflow-hidden">
-      <div className="text-white w-full flex flex-col items-center justify-center pt-32 sm:pt-52 gap-6 sm:gap-10">
+      <div className="text-white w-full flex flex-col items-center justify-center pt-32 sm:pt-36 gap-6 sm:gap-10 ">
         {/* Pulsating Text */}
         <h1 className="text-5xl sm:text-8xl font-semibold animate-pulse">
           BEE ALIVE
@@ -49,7 +47,7 @@ const BeeSection: React.FC = () => {
       <img
         src={beepng}
         alt="bee"
-        className={`absolute top-[15rem] sm:top-[20rem] w-2/3 sm:w-auto max-w-full h-auto transition-opacity duration-700 ${
+        className={`absolute top-[16rem] sm:top-[20rem] w-2/3 sm:w-auto max-w-full h-auto transition-opacity duration-700 uid mt-20 ${
           isLoaded ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
         }`}
         style={{
