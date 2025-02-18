@@ -55,7 +55,7 @@ interface FormData {
 
 export const action: ActionFunction = async ({ request }) => {
   const formData = await request.formData();
-
+  console.log(formData.get("joinWaitlist"));
   const payload = {
     sessionUuid: uuidv4(),
     respondentUuid: uuidv4(),
@@ -67,7 +67,7 @@ export const action: ActionFunction = async ({ request }) => {
       "0450ac77-87ec-4269-8ded-5cf2af98fd44": formData.get("interest"),
       "0335cb4f-d55e-47f6-9169-26d386eab303": formData.get("message"),
       "5d8d9384-b00f-43a4-a444-2b194f4e72d8":
-        formData.get("joinWaitlist") === "true" ? "Yes" : "No",
+        formData.get("joinWaitlist") === "on" ? "Yes" : "No",
     },
     captchas: {},
     isCompleted: true,
@@ -260,7 +260,7 @@ const ContactForm: React.FC = () => {
                         <SelectTrigger className="h-12 rounded-lg border-gray-200 focus:border-oha__green focus:ring-oha__green">
                           <SelectValue placeholder="What brings you to One Hive Africa?" />
                         </SelectTrigger>
-                        <SelectContent>
+                        <SelectContent className="bg-white">
                           <SelectItem value="Investing in Beekeeping">
                             Investing in Beekeeping
                           </SelectItem>
@@ -364,7 +364,7 @@ const ContactForm: React.FC = () => {
                         <MapPin className="w-5 h-5 text-gray-600 mt-1" />
                         <div>
                           <p className="font-medium">Visit Us</p>
-                          <p className="text-gray-600">Nairobi, Kenya</p>
+                          <p className="text-gray-600">Accra, Ghana</p>
                         </div>
                       </div>
                     </div>
