@@ -24,7 +24,7 @@ const navItems: NavItem[] = [
 ];
 
 const actionButtons: ActionButton[] = [
-  { name: "Login", path: "https://ohaplatform.vercel.app/", variant: "link" },
+  { name: "Login", path: "/contact", variant: "link" },
   { name: "Sponsor", path: "/partner", variant: "outline" },
   { name: "Invest", path: "/investor", variant: "solid" },
 ];

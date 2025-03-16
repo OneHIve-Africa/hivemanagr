@@ -51,11 +51,7 @@ const Footer: React.FC = () => {
 
         {/* Buttons */}
         <div className="flex flex-wrap gap-4 justify-center">
-          <DynaButtons
-            name="Login"
-            variant="outlinewhite"
-            path="https://ohaplatform.vercel.app/"
-          />
+          <DynaButtons name="Login" variant="outlinewhite" path="/contact" />
           <DynaButtons name="Sponsor" variant="solidwhite" path="/partner" />
           <DynaButtons name="Invest" variant="solid" path="/investor" />
         </div>
