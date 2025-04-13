@@ -20,7 +20,7 @@ export const meta: MetaFunction = () => {
 
 export default function Index() {
   return (
-    <div className="bg-white h-fit items-center w-screen grid">
+    <div className="bg-white h-fit items-center w-screen">
       <Header />
       <BeeSection />
       <EmpowerSection />

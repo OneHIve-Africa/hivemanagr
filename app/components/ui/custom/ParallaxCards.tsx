@@ -57,7 +57,7 @@ const Card: React.FC<CardProps> = ({
           {title}
         </h2>
         <div className="flex h-full gap-12">
-          <div className="w-3/5 relative top-[10%]">
+          <div className="w-full lg:w-3/5 relative top-[10%]">
             <p className="text-lg text-white leading-relaxed first-letter:text-3xl">
               {description}
             </p>
@@ -68,9 +68,8 @@ const Card: React.FC<CardProps> = ({
               {buttonText}
             </Button>
           </div>
-          <motion.div className="relative w-2/5 h-full rounded-3xl overflow-hidden">
+          <motion.div className="relative hidden lg:block lg:w-2/5 h-full rounded-3xl overflow-hidden">
             <motion.div className="w-full h-full" style={{ scale: imageScale }}>
-              {/* <div className="w-full h-full bg-gray-200 rounded-3xl" /> */}
               <img src={investImage} alt="" />
             </motion.div>
           </motion.div>
@@ -121,8 +120,8 @@ const ParallaxCards = () => {
   ];
 
   return (
-    <div className={`relative w-full`}>
-      <h1 className="text-center text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 mt-[10vh]">
+    <div className={`relative w-full px-1`}>
+      <h1 className="text-center text-4xl sm:text-5xl lg:text-6xl font-semibold mb-2 mt-[1vh]">
         Invest in Nature, Reap the Rewards
       </h1>
 

@@ -15,14 +15,10 @@ const WhyInvestSectipon: React.FC<Props> = () => {
   }, []);
 
   return (
-    <div className="uid h-fit w-full px-10 md:px-[198px] flex flex-col py-28 gap-y-20">
+    <div className=" h-fit w-full px-10 md:px-[198px] flex flex-col py-10 lg:py-28 gap-y-20">
       {/* Keep Investing Section */}
       <div className="uid grid grid-cols-1 lg:grid-cols-5 items-center">
-        {/* Content Card */}
-        <div
-          className="col-span-3 relative"
-          data-aos="fade-right" // Trigger fade-right animation
-        >
+        <div className="col-span-3 relative" data-aos="fade-right">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-snug">
             Why Invest in <br /> Beekeeping?
           </h1>
@@ -36,11 +32,7 @@ const WhyInvestSectipon: React.FC<Props> = () => {
             change, and drives economic empowerment.
           </p>
         </div>
-        {/* Image */}
-        <div
-          className="col-span-2"
-          data-aos="fade-left" // Trigger fade-left animation
-        >
+        <div className="col-span-2" data-aos="fade-left">
           <img src={farmpng} alt="farm" />
         </div>
       </div>
