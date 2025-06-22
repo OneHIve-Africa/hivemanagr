@@ -21,7 +21,7 @@ Our platform allows investors to browse and invest in beekeeping projects across
 
 If you're interested in learning more about investing in beekeeping through OneHive Africa, please visit our website or contact us directly. Together, we can make a positive impact on the environment and local communities while generating returns on your investment.
 
-**Join the Movement**
+**Join the Movement**  hh
 
 Be part of the movement to promote sustainable beekeeping practices and support local communities. Invest in OneHive Africa today and contribute to a brighter future for our planet.
 
