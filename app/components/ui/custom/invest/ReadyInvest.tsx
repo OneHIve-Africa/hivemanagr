@@ -138,7 +138,7 @@ const ReadyInvest: React.FC = () => {
 
       {/* Investment Form Modal */}
       <Dialog open={showModal} onOpenChange={setShowModal}>
-        <DialogContent className="sm:max-w-md md:max-w-xl bg-white">
+        <DialogContent className="sm:max-w-md md:max-w-xl bg-white overflow-y-auto max-h-[90vh] md:max-h-[85vh]">
           <DialogHeader>
             <DialogTitle className="text-xl font-semibold mb-2">
               Invest with One Hive Africa
@@ -302,7 +302,7 @@ const ReadyInvest: React.FC = () => {
 
       {/* Success Modal */}
       <Dialog open={showSuccessModal} onOpenChange={setShowSuccessModal}>
-        <DialogContent className="sm:max-w-md">
+        <DialogContent className="sm:max-w-md overflow-y-auto max-h-[90vh]">
           <DialogHeader>
             <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-green-100 mb-4">
               <CheckCircle className="h-6 w-6 text-green-600" />
